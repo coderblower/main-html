@@ -192,3 +192,13 @@ left: 0px;
 .blog-one__content{
     margin-right: 0;
 }
+
+.event-direction__counter-single {
+    width: 130px;
+    top: 83px; right: -410px ;
+    background-color: #050505;
+}
+
+.main-slider .container {
+    padding-top: 150px;
+}
