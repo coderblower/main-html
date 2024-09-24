@@ -86,7 +86,7 @@ left: 0px;
 
 .services-one__single{
     position: relative;
-    min-height: 542px;
+    min-height: 582px;
     display: flex;
     flex-direction: column;
 }
@@ -129,4 +129,66 @@ left: 0px;
 
 .main-slider__content img {
     margin-right: 15px;
+}
+
+.testimonials{
+    position: relative;
+}
+.testimonials .section-title__title::after{
+    content: '';
+    top:-10px;
+    left: 0;
+    height: 8px;
+    width: 50px;
+    background-color: var(--eventflow-base);
+    position: absolute;
+}
+
+
+.common-button {
+    background-color: var( --e-global-color-primary );
+    font-family: var( --e-global-typography-accent-font-family ), Sans-serif;
+    font-size: var( --e-global-typography-accent-font-size );
+    font-weight: var( --e-global-typography-accent-font-weight );
+    line-height: var( --e-global-typography-accent-line-height );
+    color: var( --e-global-color-secondary );
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: var( --e-global-color-primary );
+    border-radius: 0px 0px 0px 0px;
+    padding: 15px 30px 15px 30px;
+}
+
+.common-button:hover{
+    background-color: var( --e-global-color-a2c694a );
+    color: var( --e-global-color-secondary );
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: var( --e-global-color-secondary );
+    border-radius: 0px 0px 0px 0px;
+}
+
+.services-one .common-button, .blog-one .common-button{
+    width: 200px;
+}
+
+.buy-ticket span, .common-button>span{
+    margin-left:15px;
+}
+
+.cta-one, .team-one__content-hover, .event-one__points li .icon, .services-one__icon {
+    background: linear-gradient(90deg,  #c50101 0% , var(--eventflow-base) 10%, var(--eventflow-base) 90%,  #c50101 100%);
+}
+
+
+.site-footer__social a:hover, .testimonial-one__quote span, .footer-widget__contact-list li .icon span, .section-title__tagline {
+    background: linear-gradient(90deg,  #c50101 0% , var(--eventflow-base) 10%, var(--eventflow-base) 90%,  #c50101 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.blog-one__content{
+    margin-right: 0;
 }
