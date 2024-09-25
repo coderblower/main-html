@@ -54,7 +54,7 @@
 .main-slider__text::after{
     content: '';
     bottom: -5px;
-left: 0px;
+    left: 0px;
     height: 2px;
     width: 500px;
     background-color: white;
@@ -67,8 +67,10 @@ left: 0px;
 }
 
 .main-slider .main_swiper {
-    background-image: url('../../assets/images/backgrounds/banner-one-bg.jpg');
+    background-image: url('../../assets/images/Asset\ 53@2x.png');
+    background-size: cover;
 }
+canvas{display:block}
 
 .main-slider .swiper-slide::after{
     content: '';
@@ -105,7 +107,8 @@ left: 0px;
 }
 
 .services-one__text {
-    text-align: justify;
+    /* text-align: justify; */
+    font-size: 1em;
 }
 
 .brand-one {
@@ -176,13 +179,13 @@ left: 0px;
     margin-left:15px;
 }
 
-.cta-one, .team-one__content-hover, .event-one__points li .icon, .services-one__icon {
-    background: linear-gradient(90deg,  #c50101 0% , var(--eventflow-base) 10%, var(--eventflow-base) 90%,  #c50101 100%);
+.cta-one, .team-one__content-hover, .event-one__points li .icon, .services-one__icon,.services-one__single::before, .services-one__single:after {
+    background: linear-gradient(90deg,  #a78336 0% , var(--eventflow-base) 10%, var(--eventflow-base) 90%,  #a78336 100%);
 }
 
 
 .site-footer__social a:hover, .testimonial-one__quote span, .footer-widget__contact-list li .icon span, .section-title__tagline {
-    background: linear-gradient(90deg,  #c50101 0% , var(--eventflow-base) 10%, var(--eventflow-base) 90%,  #c50101 100%);
+    background: linear-gradient(90deg,  #a78336 0% , var(--eventflow-base) 10%, var(--eventflow-base) 90%,  #a78336 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -201,4 +204,27 @@ left: 0px;
 
 .main-slider .container {
     padding-top: 150px;
+}
+
+.services-one__single:hover::before {
+    border-image: linear-gradient(90deg,  #a78336 0% , var(--eventflow-base) 10%, var(--eventflow-base) 90%,  #a78336 100%);
+}
+
+.main-slider .swiper-slide-active .main-slider__title {
+    font-size: 2.5em;
+}
+
+.sliding-text__title {
+    font-size: 35px;
+}
+
+.buy-ticket__img img {
+    width: 90%;
+}
+
+.buy-ticket__img i{
+    color: rgba(255, 156, 8, 0.986);
+    font-size: 1.5em;
+    transform: translate(0px 15px);
+    position: relative;
 }

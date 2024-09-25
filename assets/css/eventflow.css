@@ -24,8 +24,8 @@
   --eventflow-gray-rgb: 124, 123, 123;
   --eventflow-white: #ffffff;
   --eventflow-white-rgb: 255, 255, 255;
-  --eventflow-base: #F12323;
-  --eventflow-base-rgb: 241, 35, 93;
+  --eventflow-base: #D0A242;
+  --eventflow-base-rgb: 208, 162, 66;
   --eventflow-black: #04000A;
   --eventflow-black-rgb: 4, 0, 10;
   --eventflow-primary: #4A0AB4;
@@ -34,7 +34,7 @@
   --eventflow-extra-rgb: 248, 248, 248;
   --eventflow-bdr-color: #CCCCCC;
   --eventflow-bdr-color-rgb: 204, 204, 204;
-  --e-global-color-primary: #F12323;
+  --e-global-color-primary: #D0A242;
   --e-global-color-secondary: #FFFFFF;
   --e-global-color-text: #B0B0B0;
   --e-global-color-accent: #030303;
