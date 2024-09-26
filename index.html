@@ -39,7 +39,18 @@
     <link rel="stylesheet" href="assets/vendors/nice-select/nice-select.css" />
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans&display=swap"
+          rel="stylesheet">
+      <!-- Style Flipdown -->
+      <link href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css" rel="stylesheet" />
+      <!-- Font Awesome -->
+      
     
 
     <!-- template styles -->
@@ -124,8 +135,8 @@
                     <div class="main-menu__wrapper-inner">
                         <div class="main-menu__left">
                             <div class="main-menu__logo">
-                                <a href="index.html"><img src="https://hellosuperstars.com/static/media/HelloSuperStarLogo.b2954c0f9e2cfe31a215.png" style="    height: 46px;
-                                    transform: scale(2.5) translate(36px, 10px);" alt=""></a>
+                                <a href="index.html"><img src="https://hellosuperstars.com/static/media/HelloSuperStarLogo.b2954c0f9e2cfe31a215.png" style="height: 46px; height: 46px;
+    transform: scale(1.5) translate(88px, 1px);" alt=""></a>
                             </div>
                         </div>
                         <div class="main-menu__main-menu-box">
@@ -135,7 +146,7 @@
                                     <a href="index.html">Home </a>
                                 </li>
                                 <li class="dropdown">
-                                    <a href="about.html">About us</a>
+                                    <a href="#">About us</a>
                                     <ul>
                                         <li><a href="about-us.html">About Us</a></li>                                      
                                     </ul>
@@ -144,8 +155,9 @@
                                 <li class="dropdown">
                                     <a href="#">Event</a>
                                     <ul>
-                                        <li><a href="our-guest.html"> invited Guest   </a></li>
-                                        <li><a href="old-evnet.html">Our previous events </a></li>
+                                        <li><a href="index.html"> Qater Event   </a></li>
+                                        <!-- <li><a href="https://versatilo.group/blog/"> Kuala Lumpur Event  </a></li> -->
+                                        <li><a href="https://versatilo.group/blog/">  Hellosuper start Grand opening </a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
@@ -168,6 +180,8 @@
                             <style>
                                path{fill:aliceblue}
                             </style>
+
+
                             <div class="main-menu__cart-search-nav-sidebar-icon-and-btn-box">
                                 <span><svg  width="40"
                                     height="25" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M16 22.621l-3.521-6.795c-.007.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.082-1.026-3.492-6.817-2.106 1.039c-1.639.855-2.313 2.666-2.289 4.916.075 6.948 6.809 18.071 12.309 18.045.541-.003 1.07-.113 1.58-.346.121-.055 2.102-1.029 2.11-1.033zm-2.5-13.621c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm9 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-4.5 0c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5z"/></svg></span>
@@ -218,14 +232,8 @@
                                 <canvas id="canvas">Canvas is not supported in your browser.</canvas>
                             </div>
                             <div class="count">
-                                <div class="event-direction__counter-single" style="">
-                            
-                                    <div class="event-direction__counter-box">
-                                        <h3 class="odometer" data-count="101">00</h3>
-                                        <hr>
-                                        <span class="event-direction__counter-plus"></span>
-                                    </div>
-                                    <p class="event-direction__counter-text">Days Left </p>
+                                <div class="count-down">
+                                    <div class="flipdown" id="flipdown"></div>
                                 </div>
                               </div>
                             
@@ -236,7 +244,7 @@
                                         <div class="">
                                             <section class="brand-one">
                                                 <div class="container">
-                                                    <div style="margin-top:-100px" class="brand-one__inner" >
+                                                    <div style="margin-top:-350px" class="brand-one__inner" >
 
                                                       
 
@@ -283,14 +291,13 @@
                 
                                                                 <div class="swiper-slide testimonial-one__single">
                                                                     <div class="testimonial-one__client-info-and-review">
-                                                                        <div class="testimonial-one__client-info">
+                                                                        <div class="testimonial-one__client-info" style="">
                                                                             <div class="testimonial-one__client-img">
-                                                                                <img src="assets/images/testimonial/testimonial-one-client-1-1.jpg" alt="">
+                                                                                <img src="assets/images/protik.jpg" alt="">
                                                                             </div>
                                                                             <div class="testimonial-one__client-content">
-                                                                                <h4 class="testimonial-one__client-name"><a href="testimonials.html">jonathon
-                                                                                        Doe</a></h4>
-                                                                                <p class="testimonial-one__sub-title">Officer</p>
+                                                                                <h4 class="testimonial-one__client-name"><a href="testimonials.html">Protik Hasan </a></h4>
+                                                                                <p class="testimonial-one__sub-title">Singer</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="testimonial-one__review">
@@ -301,15 +308,12 @@
                                                                             <span class="icon-star clr-start"></span>
                                                                         </div>
                                                                     </div>
-                                                                    <p class="testimonial-one__text">Events are special occasions where people
-                                                                        gather together to celebrate, commemorate, or participate in a sn purpose or
-                                                                        theme Events are special occasions where peopl gather together to celebrate
-                                                                        Events are special</p>
+                                                                    <p class="testimonial-one__text">  হ্যালো সুপারষ্টারস এর মতো এতো চমৎকার একটা মোবাইল এ্যাপস আমাদের বাংলাদেশী একজন তৈরি এবং উদ্ভাবন করেছেন, এজন্য আমরা অহংকার বোধ করি</p>
                                                                     <div class="testimonial-one__quote">
                                                                         <span class="icon-quote"></span>
                                                                     </div>
                                                                 </div>
-
+                
                                                                 <div class="swiper-slide testimonial-one__single" style="background-color: rgba(63, 58, 52, 0.562);">
                                                                     <div class="main-slider__content " style="left: -40px;">
                                                                         <!-- <p class="main-slider__sub-title">Music fastival</p> -->
@@ -410,7 +414,7 @@
                                         <ul class="list-unstyled main-slider__address">
                                             <li>
                                                 <div class="icon">
-                                                    <span class="icon-pin"></span>
+                                                    <i class="fa-solid fa-location-dot"></i>
                                                 </div>
                                                 <div class="text">
                                                     <p> Doha, Qatar </p>
@@ -418,7 +422,7 @@
                                             </li>
                                             <li>
                                                 <div class="icon">
-                                                    <span class="icon-clock"></span>
+                                                    <i class="fa-regular fa-clock"></i>
                                                 </div>
                                                 <div class="text">
                                                     <p>December 15 to 18, 2024</p>
@@ -448,7 +452,7 @@
         <!--Main Slider End-->
 
            <!--Brand One Start-->
-           <div class="brand_sec" style="margin-top: 30px;">
+           <div class="brand_sponsor brand_one" style="margin-top: 30px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 patner_sponsor_text">
@@ -501,54 +505,30 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-1.png" alt=""></a>
+                                                    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Rtv_bangladesh.svg/360px-Rtv_bangladesh.svg.png" alt=""></a>
                                                 </div>
                                             </div><!-- /.swiper-slide -->
                                             <div class="swiper-slide">
                                                 <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-2.png" alt=""></a>
+                                                    <a href="#"><img style="transform:scale(2.5)" src="assets/images/sponsor/biman.svg" alt=""></a>
                                                 </div>
                                             </div><!-- /.swiper-slide -->
                                             <div class="swiper-slide">
                                                 <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-3.png" alt=""></a>
+                                                    <a href="#"><img style="transform:scale(2)" src="https://upload.wikimedia.org/wikipedia/fr/thumb/c/cb/Logo_Qatar_Airways.svg/langfr-330px-Logo_Qatar_Airways.svg.png" alt=""></a>
                                                 </div>
                                             </div><!-- /.swiper-slide -->
                                             <div class="swiper-slide">
                                                 <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-4.png" alt=""></a>
+                                                    <a href="#"><img style="transform:scale(1.1)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ATN_Bangla.svg/400px-ATN_Bangla.svg.png" alt=""></a>
                                                 </div>
                                             </div><!-- /.swiper-slide -->
                                             <div class="swiper-slide">
                                                 <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-5.png" alt=""></a>
+                                                    <a href="#"><img style="transform:scale(1.9)" src="https://cdn.usbair.com/website/public/images/home_page/homepage_logo.png.svg" alt=""></a>
                                                 </div>
                                             </div><!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-1.png" alt=""></a>
-                                                </div>
-                                            </div><!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-2.png" alt=""></a>
-                                                </div>
-                                            </div><!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-3.png" alt=""></a>
-                                                </div>
-                                            </div><!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-4.png" alt=""></a>
-                                                </div>
-                                            </div><!-- /.swiper-slide -->
-                                            <div class="swiper-slide">
-                                                <div class="swiper-slide__img">
-                                                    <a href="#"><img src="assets/images/brand/brand-1-5.png" alt=""></a>
-                                                </div>
-                                            </div><!-- /.swiper-slide -->
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -721,7 +701,7 @@
                             <ul class="buy-ticket__address list-unstyled">
                                 <li>
                                     <div class="icon">
-                                        <span class="icon-clock"></span>
+                                        <span class="icon-pin"></span>
                                     </div>
                                     <div class="text">
                                         <p> Doha, Qatar </p>
@@ -729,14 +709,15 @@
                                 </li>
                                 <li>
                                     <div class="icon">
-                                        <span class="icon-pin"></span>
+                                        
+                                        <span class="icon-clock"></span>
                                     </div>
                                     <div class="text">
                                         <p>December 15 to 18, 2024</p>
                                     </div>
                                 </li>
                             </ul>
-                            <h3 class="buy-ticket__title">Grab Your Seat Wow Or You May Regret it Once</h3>
+                            <h3 class="buy-ticket__title">Grab Your Seat <br> Or You May Regret it Once</h3>
                             <p class="buy-ticket__text">Events bring people together for a shared experien celebration a
                                 From weddings and <br> birthdays to conferences Events bring people together for a
                                 shared </p>
@@ -750,11 +731,11 @@
                     </div>
                     <div class="col-xl-6" style="display: flex; flex-direction:column">
                         <div class="buy-ticket__right wow fadeInRight" data-wow-delay="300ms">
-                            <div class="buy-ticket__img">
-                                <img src="assets/images/spining_wheel.jpg" alt="">
+                            <div class="buy-ticket__img sliding-text__title">
+                                <img src="assets/images/spining_wheel.png" alt="">
                             </div>
                         </div>
-                        <div><h2 style="text-align: center;"> Spin Wheel and Get free tickets </h2></div><br>
+                        <div><h2 style="text-align: center;"> Spin The Wheel And Get free ticket </h2></div><br>
                         <div style="display: flex; justify-content:center; align-items:center"> <a href="https://hellosuperstars.com/loyalty-wallet/lucky-spin" class="buy-ticket__btn-2 common-button">Spin Wheel <span
                                 class="icon-arrow-right"></span> </a></div>
                         
@@ -769,9 +750,208 @@
             <div class="container">
                 <div class="section-title text-center">
                     <div class="section-title__tagline-box">
-                        <span class="section-title__tagline">Our Team Member</span>
+                        <span class="section-title__tagline">Special Attendees</span>
                     </div>
                     <h2 class="section-title__title">our amaizing & lerned <br> event speakerss</h2>
+                </div>
+
+                <div class="row">
+                    <!-- <div class="col-xl-4 col-lg-6 wow fadeInLeft" style="margin-left: auto; margin-right:auto" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="https://versatilo.group/wp-content/uploads/2021/10/image9-850x800.jpeg" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Dr. Kamrul Ahsan</a></h4>
+                                        <p class="team-one__sub-title">Chairman, Versatilo Group</p>
+                                    </div>
+                                    <div class="team-one__content-hover">
+                                        <h4 class="team-one__name"><a href="team-details.html">Dr. Kamrul Ahsan</a></h4>
+                                        <p class="team-one__sub-title">MBA, PhD, PGDIP(UK)</p>
+                                        <p class="team-one__sub-title">Academic, Media Personality,</p>
+                                        <p class="team-one__sub-title">Chairman, Versatilo Group</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <!-- Team One Single Start -->
+                    <!-- <div class="col-xl-4 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/stars/Asset 11@2x.png" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Abdul Mukit Tonku</a></h4>
+                                        <p class="team-one__sub-title">Managing Director</p>
+                                        <p class="team-one__sub-title">Hello Superstars</p>
+                                    </div>
+                                    <div class="team-one__content-hover">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Abdul Mukit Tonku</a></h4>
+                                        <p class="team-one__sub-title">Managing Director</p>
+                                        <p class="team-one__sub-title">Hello Superstars</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="col-xl-4 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/Gaz-Mam.jpg" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Gezel Mohsenzadeh</a></h4>
+                                        <p class="team-one__sub-title">Executive Director</p>
+                                        <p class="team-one__sub-title">Hello Superstars</p>
+                                    </div>
+                                    <div class="team-one__content-hover">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Gezel Mohsenzadeh</a></h4>
+                                        <p class="team-one__sub-title">Executive Director</p>
+                                        <p class="team-one__sub-title">Hello Superstars</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="col-xl-4 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/Nirob.jpg" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Nirob Hossain</a></h4>
+                                        <p class="team-one__sub-title">Chief Operating Office</p>
+                                        <p class="team-one__sub-title">Hello Superstars</p>
+                                    </div>
+                                    <div class="team-one__content-hover">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Nirob Hossain</a></h4>
+                                        <p class="team-one__sub-title">Chief Operating Office</p>
+                                        <p class="team-one__sub-title">Hello Superstars</p>
+                                    </div>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/Tamiz.jpg" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Aftab Bin Tamiz</a></h4>
+                                        <p class="team-one__sub-title">Special Guest</p>
+                                    </div>
+                                    <div class="team-one__content-hover">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Aftab Bin Tamiz</a></h4>
+                                        <p class="team-one__sub-title">Special Guest</p>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/Nur-Nobi.jpg" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Md. Nurunnabi</a></h4>
+                                        <p class="team-one__sub-title">Head of HR and Administration</p>
+                                    </div>
+                                    <div class="team-one__content-hover">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Md. Nurunnabi</a></h4>
+                                        <p class="team-one__sub-title">Head of HR and Administration</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+           
+
+                    <div class="col-xl-4 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/Aminul.jpg" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Capt. Aminul Haque (Retd)</a></h4>
+                                        <p class="team-one__sub-title">Executive Secretary to the Chairman</p>
+                                    </div>
+                                    <div class="team-one__content-hover">
+                                        <h4 class="team-one__name"><a href="team-details.html">Capt. Aminul Haque (Retd)</a></h4>
+                                        <p class="team-one__sub-title">Executive Secretary to the Chairman</p>
+                                    </div>
+                                    
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/Tanni.jpg" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mrs. Afsana Tanni</a></h4>
+                                        <p class="team-one__sub-title">Project Manager</p>
+                                    </div>
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mrs. Afsana Tanni</a></h4>
+                                        <p class="team-one__sub-title">Project Manager</p>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-4 col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                        <div class="team-one__single">
+                            <div class="team-one__img-box">
+                                <div class="team-one__img">
+                                    <img src="assets/images/team/ABC.jpg" alt="">
+                                    <div class="team-one__content">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Abu Bakar Siddique</a></h4>
+                                        <p class="team-one__sub-title">Special Assistant to the Chairman</p>
+                                    </div>
+                                    <div class="team-one__content-hover">
+                                        <h4 class="team-one__name"><a href="team-details.html">Mr. Abu Bakar Siddique</a></h4>
+                                        <p class="team-one__sub-title">Special Assistant to the Chairman</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team One End -->
+
+
+
+
+        <!-- Team One Start -->
+        <section class="team-one">
+            <div class="container">
+                <div class="section-title text-center">
+                    <div class="section-title__tagline-box">
+                        <span class="section-title__tagline">Special Guests</span>
+                    </div>
+                    <h2 class="section-title__title">our amaizing & lerned <br> Special Guests</h2>
                 </div>
                 <div class="row">
                     <!-- Team One Single Start -->
@@ -1010,10 +1190,25 @@
                 </div>
                 <div class="row masonary-layout">
                     <div class="col-xl-3 col-lg-6 col-md-6">
-                        <a href="assets/images/gallery/gallery-1-1.jpg">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img">
+                                <img src="https://versatilo.group/wp-content/uploads/2023/05/IMG_8147.jpg" alt="">
+                                <div class="gallery-one__content">
+                                    <div class="gallery-one__sub-title-box">
+                                        <div class="gallery-one__sub-title-shape"></div>
+                                        <p class="gallery-one__sub-title">Gala Affairs</p>
+                                    </div>
+                                    <h4 class="gallery-one__title"><a href="gallery-details.html">Dream Makers Event
+                                            Planning</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <a href="https://versatilo.group/wp-content/uploads/2023/05/IMG_8333.jpg">
                             <div class="gallery-one__single">
                                 <div class="gallery-one__img">
-                                <img src="assets/images/gallery/gallery-1-1.jpg" alt=""> 
+                                <img src="https://versatilo.group/wp-content/uploads/2023/05/IMG_8060.jpg" alt=""> 
                                     <div class="gallery-one__content">
                                         <div class="gallery-one__sub-title-box">
                                             <div class="gallery-one__sub-title-shape"></div>
@@ -1031,7 +1226,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="gallery-one__single">
                             <div class="gallery-one__img">
-                                <img src="assets/images/gallery/gallery-1-3.jpg" alt="">
+                                <img src="https://versatilo.group/wp-content/uploads/2023/05/IMG_8051.jpg" alt="">
                                 <div class="gallery-one__content">
                                     <div class="gallery-one__sub-title-box">
                                         <div class="gallery-one__sub-title-shape"></div>
@@ -1046,7 +1241,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="gallery-one__single">
                             <div class="gallery-one__img">
-                                <img src="assets/images/gallery/gallery-1-4.jpg" alt="">
+                                <img src="https://versatilo.group/wp-content/uploads/2023/05/IMG_8047.jpg" alt="">
                                 <div class="gallery-one__content">
                                     <div class="gallery-one__sub-title-box">
                                         <div class="gallery-one__sub-title-shape"></div>
@@ -1061,7 +1256,52 @@
                     <div class="col-xl-3 col-lg-6 col-md-6">
                         <div class="gallery-one__single">
                             <div class="gallery-one__img">
-                                <img src="assets/images/gallery/gallery-1-5.jpg" alt="">
+                                <img src="https://versatilo.group/wp-content/uploads/2023/05/IMG_8057.jpg" alt="">
+                                <div class="gallery-one__content">
+                                    <div class="gallery-one__sub-title-box">
+                                        <div class="gallery-one__sub-title-shape"></div>
+                                        <p class="gallery-one__sub-title">Gala Affairs</p>
+                                    </div>
+                                    <h4 class="gallery-one__title"><a href="gallery-details.html">Dream Makers Event
+                                            Planning</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img">
+                                <img src="https://versatilo.group/wp-content/uploads/2023/05/IMG_8282.jpg" alt="">
+                                <div class="gallery-one__content">
+                                    <div class="gallery-one__sub-title-box">
+                                        <div class="gallery-one__sub-title-shape"></div>
+                                        <p class="gallery-one__sub-title">Gala Affairs</p>
+                                    </div>
+                                    <h4 class="gallery-one__title"><a href="gallery-details.html">Dream Makers Event
+                                            Planning</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img">
+                                <img src="https://versatilo.group/wp-content/uploads/2023/05/IMG_8333.jpg" alt="">
+                                <div class="gallery-one__content">
+                                    <div class="gallery-one__sub-title-box">
+                                        <div class="gallery-one__sub-title-shape"></div>
+                                        <p class="gallery-one__sub-title">Gala Affairs</p>
+                                    </div>
+                                    <h4 class="gallery-one__title"><a href="gallery-details.html">Dream Makers Event
+                                            Planning</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="gallery-one__single">
+                            <div class="gallery-one__img">
+                                <img src="https://versatilo.group/wp-content/uploads/2023/05/IMG_8205.jpg" alt="">
                                 <div class="gallery-one__content">
                                     <div class="gallery-one__sub-title-box">
                                         <div class="gallery-one__sub-title-shape"></div>
@@ -1421,14 +1661,14 @@
                 <div class="container">
                     <div class="site-footer__top-inner">
                         <div class="site-footer__logo">
-                            <a href="index.html"><img src="assets/images/resources/site-footer-logo-1.png" alt=""></a>
+                            <!-- <a href="index.html"><img src="assets/images/resources/site-footer-logo-1.png" alt=""></a> -->
                         </div>
-                        <div class="site-footer__social">
+                        <!-- <div class="site-footer__social">
                             <a href="#"><i class="icon-facebook"></i></a>
                             <a href="#"><i class="icon-fi"></i></a>
                             <a href="#"><i class="icon-instagram"></i></a>
                             <a href="#"><i class="icon-pinterest"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -1623,6 +1863,7 @@
     <script src="assets/vendors/countdown/countdown.min.js"></script>
     <script src="assets/vendors/marque/marquee.min.js"></script>
     <script src="assets/vendors/sidebar-content/jquery-sidebar-content.js"></script>
+    <script src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js"></script>
 
 
 
