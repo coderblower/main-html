@@ -91,7 +91,7 @@
   if ($(".count-bar").length) {
     $(".count-bar").appear(
       function () {
-        var el = $(this);
+      var el = $(this);
         var percent = el.data("percent");
         $(el).css("width", percent).addClass("counted");
       }, {
@@ -792,7 +792,7 @@ var canvas = document.getElementById( 'canvas' ),
 		ctx = canvas.getContext( '2d' ),
 		// full screen dimensions
 		cw = window.innerWidth,
-		ch = window.innerHeight,
+		ch = window.innerHeight, 
 		// firework collection
 		fireworks = [],
 		// particle collection
@@ -828,6 +828,12 @@ function calculateDistance( p1x, p1y, p2x, p2y ) {
 			yDistance = p1y - p2y;
 	return Math.sqrt( Math.pow( xDistance, 2 ) + Math.pow( yDistance, 2 ) );
 }
+
+function getSound(url){
+  return new Audio(url).play;
+
+
+};
 
 // create firework
 function Firework( sx, sy, tx, ty ) {
@@ -893,8 +899,24 @@ Firework.prototype.update = function( index ) {
 	}
 }
 
+
+Firework.prototype.cannonSound = function(){
+  let sound = getSound('cannon');
+  return sound;
+}
+
+Firework.prototype.explodeSound = function(){
+  return getSound('explode.mp3');
+  
+}
+
+Firework.prototype.sound = function(){
+  return {explodeSound:this.explodeSound, cannonSound: this.cannonSound};
+}
+
 // draw firework
 Firework.prototype.draw = function() {
+  
 	ctx.beginPath();
 	// move to the last tracked coordinate in the set, then draw a line to the current x and y
 	ctx.moveTo( this.coordinates[ this.coordinates.length - 1][ 0 ], this.coordinates[ this.coordinates.length - 1][ 1 ] );
@@ -966,11 +988,14 @@ Particle.prototype.draw = function() {
 // create particle group/explosion
 function createParticles( x, y ) {
 	// increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
-	var particleCount = 30;
+	var particleCount = ~~(Math.random() * 10) + 1000;
 	while( particleCount-- ) {
 		particles.push( new Particle( x, y ) );
 	}
 }
+
+
+var time = Date.now()+10000;
 
 // main demo loop
 function loop() {
@@ -988,7 +1013,7 @@ function loop() {
 	// setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
 	ctx.globalCompositeOperation = 'destination-out';
 	// decrease the alpha property to create more prominent trails
-	ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
 	ctx.fillRect( 0, 0, cw, ch );
 	// change the composite operation back to our main mode
 	// lighter creates bright highlight points as the fireworks and particles overlap each other
@@ -1000,6 +1025,7 @@ function loop() {
 		fireworks[ i ].draw();
 		fireworks[ i ].update( i );
 	}
+
 	
 	// loop over each particle, draw it, update it
 	var i = particles.length;
@@ -1008,10 +1034,42 @@ function loop() {
 		particles[ i ].update( i );
 	}
 	
+
 	// launch fireworks automatically to random coordinates, when the mouse isn't down
-	if( timerTick >= timerTotal ) {
+	if( timerTick >= timerTotal && time> Date.now() ) {
 		if( !mousedown ) {
+      let time = 1300;
+     var iterTimer = 0;
+
+
+    for(var i =0; i < 3; i++){
+      if(time > 200){
+        iterTimer += Math.floor(random(200, 400));
+        time =  time-iterTimer;
+      } else{
+        iterTimer = time;
+      }
+      
+        
+      
+      setTimeout(function(){
+        console.log(iterTimer)
+        let arr = Array.from(Array(Math.floor(random(1,3))).keys()).forEach(x=>{
+            
+            
+      			fireworks.push(  new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+            
+        })
+      }, iterTimer )
+
+    }      
+
+
+      
+
+      
 			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
+			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
 			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
 			timerTick = 0;
 		}
