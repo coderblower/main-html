@@ -70,9 +70,17 @@
     background-image: url('../../assets/images/Asset\ 53@2x.png');
     background-size: cover;
 }
+
+.main-kuala{
+    
+}
+
+
+
+
 canvas{display:block}
 
-.main-slider .main_swiper::after{
+.main-slider .main_swiper::after, .main-kuala::after{
     content: '';
     top:0;
     left: 0;
@@ -230,8 +238,8 @@ canvas{display:block}
 }
 
 canvas {
-    left: -435px;
-    top:50px;
+    left: -605px;
+    top:40px;
     position: relative;
 }
 

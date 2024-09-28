@@ -787,6 +787,8 @@ window.requestAnimFrame = ( function() {
 				};
 })();
 
+
+
 // now we will setup our basic variables for the demo
 var canvas = document.getElementById( 'canvas' ),
 		ctx = canvas.getContext( '2d' ),
@@ -966,11 +968,15 @@ Particle.prototype.draw = function() {
 // create particle group/explosion
 function createParticles( x, y ) {
 	// increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
-	var particleCount = 30;
+	var particleCount = Math.floor(random(300, 1000));
 	while( particleCount-- ) {
 		particles.push( new Particle( x, y ) );
 	}
 }
+
+let lengthTime = Date.now()+12000;
+
+let stratFrom = Date.now()+6000;
 
 // main demo loop
 function loop() {
@@ -988,7 +994,7 @@ function loop() {
 	// setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
 	ctx.globalCompositeOperation = 'destination-out';
 	// decrease the alpha property to create more prominent trails
-	ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
 	ctx.fillRect( 0, 0, cw, ch );
 	// change the composite operation back to our main mode
 	// lighter creates bright highlight points as the fireworks and particles overlap each other
@@ -1009,10 +1015,33 @@ function loop() {
 	}
 	
 	// launch fireworks automatically to random coordinates, when the mouse isn't down
-	if( timerTick >= timerTotal ) {
-		if( !mousedown ) {
+	if( timerTick >= timerTotal && lengthTime > Date.now() && stratFrom<Date.now() ) {
+    
+		if( !mousedown  ) {
 			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
-			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+      let time = 1300;
+      let iterTime = 0;
+    
+  
+     for(let i = 0; i < 3; i++){
+
+    
+      
+         
+        iterTime +=  Math.floor(random(300,400))
+         
+        
+     
+        console.log(iterTime)
+        setTimeout(function(){
+          Array.from(Array(2)).forEach(x=>{
+            fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+          })
+          
+        }, iterTime);
+     }      
+
+			
 			timerTick = 0;
 		}
 	} else {
