@@ -787,6 +787,8 @@ window.requestAnimFrame = ( function() {
 				};
 })();
 
+
+
 // now we will setup our basic variables for the demo
 var canvas = document.getElementById( 'canvas' ),
 		ctx = canvas.getContext( '2d' ),
@@ -1014,6 +1016,7 @@ function loop() {
 	// setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
 	ctx.globalCompositeOperation = 'destination-out';
 	// decrease the alpha property to create more prominent trails
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
 	ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
 	ctx.fillRect( 0, 0, cw, ch );
 	// change the composite operation back to our main mode
