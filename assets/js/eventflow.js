@@ -830,7 +830,7 @@ function calculateDistance( p1x, p1y, p2x, p2y ) {
 }
 
 function getSound(url){
-  return new Audio(url).play;
+  return new Audio(url).play();
 
 
 };
@@ -995,7 +995,8 @@ function createParticles( x, y ) {
 }
 
 
-var time = Date.now()+10000;
+var time = Date.now()+12000;
+var startTime = Date.now()+5000;
 
 // main demo loop
 function loop() {
@@ -1036,10 +1037,10 @@ function loop() {
 	
 
 	// launch fireworks automatically to random coordinates, when the mouse isn't down
-	if( timerTick >= timerTotal && time> Date.now() ) {
+	if( timerTick >= timerTotal && time> Date.now() && Date.now()>startTime ) {
 		if( !mousedown ) {
       let time = 1300;
-     var iterTimer = 0;
+       var iterTimer = 0;
 
 
     for(var i =0; i < 3; i++){
@@ -1053,7 +1054,7 @@ function loop() {
         
       
       setTimeout(function(){
-        console.log(iterTimer)
+        
         let arr = Array.from(Array(Math.floor(random(1,3))).keys()).forEach(x=>{
             
             
@@ -1111,12 +1112,11 @@ canvas.addEventListener( 'mouseup', function( e ) {
 window.onload = loop;
 
 
-
 // The End Of Year Date To Countdown Date
 
 document.addEventListener('DOMContentLoaded', () => {
   // Unix timestamp (in seconds) to count down to
-  var toDayFromNow = (new Date("Dec 31, 2024 23:59:59").getTime() / 1000) + (3600 / 60 / 60 / 24) - 1;
+  var toDayFromNow = (new Date("Dec 14, 2024 23:59:59").getTime() / 1000) + (3600 / 60 / 60 / 24) - 1;
   // Set Up FlipDown
   var flipdown = new FlipDown(toDayFromNow)
 
