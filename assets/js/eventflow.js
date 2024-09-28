@@ -832,13 +832,17 @@ function calculateDistance( p1x, p1y, p2x, p2y ) {
 }
 
 function getSound(url){
-  return new Audio(url).play();
+  return new Audio(url);
 
 
 };
 
 // create firework
 function Firework( sx, sy, tx, ty ) {
+
+  let cannonSound = this.cannonSound();
+  let explode = this.explodeSound();
+
 	// actual coordinates
 	this.x = sx;
 	this.y = sy;
@@ -864,6 +868,10 @@ function Firework( sx, sy, tx, ty ) {
 	this.brightness = random( 50, 70 );
 	// circle target indicator radius
 	this.targetRadius = 1;
+
+  let that = this;
+  setTimeout(function(){explode.play()},2000);
+  setTimeout(function(){cannonSound.play()},800)
 }
 
 // update firework
@@ -903,8 +911,8 @@ Firework.prototype.update = function( index ) {
 
 
 Firework.prototype.cannonSound = function(){
-  let sound = getSound('cannon');
-  return sound;
+   return getSound('cannon.mp3');
+  
 }
 
 Firework.prototype.explodeSound = function(){
@@ -1073,8 +1081,8 @@ function loop() {
 
       
 			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
-			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
-			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+			// fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+			// fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
 			timerTick = 0;
 		}
 	} else {
@@ -1112,7 +1120,16 @@ canvas.addEventListener( 'mouseup', function( e ) {
 });
 
 // once the window loads, we are ready for some fireworks!
+
 window.onload = loop;
+document.getElementById('main-slider-pagination').addEventListener('click', function() {
+  
+  time = Date.now()+12000;
+   startTime = Date.now()+5000;
+  // Start the fireworks after user interaction
+  // Start the animation loop
+});
+
 
 
 // The End Of Year Date To Countdown Date
