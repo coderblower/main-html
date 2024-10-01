@@ -1125,7 +1125,7 @@ window.onload = loop;
 document.getElementById('main-slider-pagination').addEventListener('click', function() {
   
   time = Date.now()+12000;
-   startTime = Date.now()+5000;
+   startTime = Date.now()+1000;
   // Start the fireworks after user interaction
   // Start the animation loop
 });
